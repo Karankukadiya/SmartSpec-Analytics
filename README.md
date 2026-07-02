@@ -22,11 +22,3 @@ An end-to-end smartphone market analytics project that combines **web scraping, 
 ## Project Workflow
 
 Web Scraping → Data Cleaning → EDA → Statistical Analysis → SQL Analysis → Machine Learning → Power BI Dashboard
-
-## Key Insights
-
-* Identified smartphone pricing trends
-* Compared brand performance and specifications
-* Analyzed feature impact on price
-* Built predictive models for smartphone price estimation
-* Developed interactive dashboards for business insights
