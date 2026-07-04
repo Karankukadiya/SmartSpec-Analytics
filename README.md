@@ -174,7 +174,7 @@ A live web app that lets users input smartphone specifications (Brand, Processor
 
 **Run locally:**
 ```bash
-git clone https://github.com/<your-username>/smartspec-analytics.git
+git clone https://github.com/Karankukadiya/SmartSpec-Analytics.git
 cd smartspec-analytics
 pip install -r requirements.txt
 streamlit run app.py
