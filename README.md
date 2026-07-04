@@ -187,24 +187,6 @@ streamlit run app.py
 
 ---
 
-## 📁 Repository Structure
-
-```
-smartspec-analytics/
-│
-├── data/                   # Raw and cleaned datasets
-├── scraping/                # Selenium web scraping scripts
-├── notebooks/                # EDA, statistical analysis, feature engineering notebooks
-├── sql/                      # SQL business analysis queries
-├── models/                   # Trained ML models and evaluation scripts
-├── dashboard/                 # Power BI (.pbix) dashboard file
-├── app.py                     # Streamlit web application
-├── requirements.txt
-└── README.md
-```
-
----
-
 ## 💡 Key Insights
 
 - The market is dominated by budget and mid-range devices (₹10,000–₹30,000)
