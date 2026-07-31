@@ -107,7 +107,7 @@ Raw scraped data required extensive preprocessing:
 - Samsung leads in listing volume; Apple and Google command the highest median prices
 - Storage and RAM show strong positive correlation with price (0.65 and 0.40); battery shows weak correlation (-0.29)
 
-Full visualizations (histograms, boxplots, correlation heatmap, brand comparisons) are available in the [`/notebooks`](./notebooks) folder.
+Full visualizations (histograms, boxplots, correlation heatmap, brand comparisons) are available in the [`Python Visualization/Screenshots`](./Python%20Visualization/Screenshots) folder.
 
 ---
 
