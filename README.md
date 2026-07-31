@@ -135,7 +135,7 @@ Five hypothesis tests were conducted at a 95% confidence level:
 - Customer rating analysis
 - Advanced queries using **CTEs, subqueries, and window functions** (`RANK()`, `DENSE_RANK()`, `ROW_NUMBER()`, `OVER()`)
 
-SQL scripts are available in [`/sql`](./sql).
+SQL scripts are available in [`SQL Business Analysis/Business Queires.sql`](./SQL%20Business%20Analysis/Business%20Queires.sql).
 
 ---
 
