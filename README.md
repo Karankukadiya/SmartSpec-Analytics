@@ -164,7 +164,7 @@ An interactive dashboard with 7 KPI cards and 6 charts, enabling users to explor
 - Storage, RAM, and battery distribution
 - Cross-filtering and interactive tooltips across all visuals
 
-📁 File: [`SmartSpec_Dashboard.pbix`](./dashboard)
+📁 File: [`Dashboard.pbix`](./Dashboard.pbix)
 
 ---
 
