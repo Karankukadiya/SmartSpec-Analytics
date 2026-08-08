@@ -1,15 +1,6 @@
-# ==========================================
-# SmartSpec Analytics
-# Smartphone Price Prediction
-# ==========================================
-
 import streamlit as st
 import pandas as pd
 import joblib
-
-# ------------------------------------------
-# Page Configuration
-# ------------------------------------------
 
 st.set_page_config(
     page_title="SmartSpec Analytics",
@@ -18,45 +9,9 @@ st.set_page_config(
 )
 
 st.markdown("""
-<style>
 
-/* Main background */
-.main {
-    background-color: #F8F9FA;
-}
-
-/* Metric cards */
-div[data-testid="metric-container"]{
-    border:1px solid #E6E6E6;
-    padding:18px;
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* Sidebar */
-section[data-testid="stSidebar"]{
-}
-
-/* Buttons */
-.stButton>button{
-    width:100%;
-    border-radius:10px;
-    height:45px;
-    font-size:16px;
-    font-weight:bold;
-}
-
-/* Headers */
-h1,h2,h3{
-    color:#0E1117;
-}
-
-</style>
 """, unsafe_allow_html=True)
 
-# ------------------------------------------
-# Load Model & Dataset
-# ------------------------------------------
 
 @st.cache_resource
 def load_model():
@@ -67,11 +22,14 @@ def load_model():
 def load_data():
     return pd.read_excel("Dataset.xlsx")
 
+
 model = load_model()
 df = load_data()
 
 import re
 
+
+# Convert the raw display text into simpler display categories
 def extract_display_type(display):
 
     display = str(display).upper()
@@ -106,8 +64,11 @@ def extract_display_type(display):
     else:
         return "Other"
 
+
 df["Display_Type"] = df["Display"].apply(extract_display_type)
 
+
+# Count only the rear camera specifications from the raw camera field
 def rear_camera_count(camera):
 
     camera = str(camera)
@@ -119,15 +80,13 @@ def rear_camera_count(camera):
 
 df["Rear_Camera_Count"] = df["Camera"].apply(rear_camera_count)
 
-# ------------------------------------------
-# Header
-# ------------------------------------------
 
 with st.container():
 
     st.title("📱 SmartSpec Analytics")
 
     st.markdown("""
+
 ### Machine Learning Based Smartphone Price Prediction
 
 Predict smartphone prices from hardware specifications using an
@@ -136,11 +95,8 @@ Predict smartphone prices from hardware specifications using an
 **Tech Stack:** Python • Pandas • Scikit-Learn • XGBoost • Streamlit
 """)
 
-st.divider()
+    st.divider()
 
-# ------------------------------------------
-# Sidebar
-# ------------------------------------------
 
 st.sidebar.header("Enter Smartphone Specifications")
 
@@ -207,9 +163,6 @@ predict = st.sidebar.button(
     use_container_width=True
 )
 
-# ------------------------------------------
-# Prediction
-# ------------------------------------------
 
 if predict:
 
@@ -253,13 +206,10 @@ if predict:
                 value=f"₹ {prediction:,.0f}"
             )
         else:
-            st.info("Enter smartphone specifications and click **Predict Price**.")   
+            st.info("Enter smartphone specifications and click **Predict Price**.")
+
 
 st.divider()
-
-# ------------------------------------------
-# Model Performance
-# ------------------------------------------
 
 st.subheader("📈 Model Performance")
 
@@ -314,6 +264,7 @@ with st.container(border=True):
     st.subheader("ℹ️ About Project")
 
     st.markdown("""
+
 This project predicts smartphone prices using Machine Learning.
 
 ### Workflow
